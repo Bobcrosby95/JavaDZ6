@@ -1,7 +1,5 @@
 package ru.netology.services;
 
-import java.util.Arrays;
-
 public class SaleService {
     public int minMonthSales(int[] sales) {
         int minMonth = 0;
@@ -11,7 +9,6 @@ public class SaleService {
                 minMonth = i;
             }
         }
-
         return minMonth + 1;
     }
 
@@ -23,14 +20,12 @@ public class SaleService {
                 maxMonth = i;
             }
         }
-
         return maxMonth + 1;
     }
 
     public int minAverageMonthSales(int[] sales) {
         int average = 0;
-        if (sales.length > 0)
-        {
+        if (sales.length > 0) {
             int sum = 0;
             for (int j = 0; j < sales.length; j++) {
                 sum += sales[j];
@@ -39,19 +34,17 @@ public class SaleService {
         }
 
         int month = 0;
-        for (int i = 0; i < sales.length ; i++) {
+        for (int i = 0; i < sales.length; i++) {
             if (average > sales[i]) {
                 month++;
             }
         }
-
         return month;
     }
 
     public int maxAverageMonthSales(int[] sales) {
         int average = 0;
-        if (sales.length > 0)
-        {
+        if (sales.length > 0) {
             int sum = 0;
             for (int j = 0; j < sales.length; j++) {
                 sum += sales[j];
@@ -60,26 +53,27 @@ public class SaleService {
         }
 
         int month = 0;
-        for (int i = 0; i < sales.length ; i++) {
+        for (int i = 0; i < sales.length; i++) {
             if (average < sales[i]) {
                 month++;
             }
         }
-
         return month;
     }
 
     public int SumSales(int[] sales) {
-        int[] AllSales = sales;
-        int total = Arrays.stream(AllSales).sum();
-
-        return total;
+        int sum = 0;
+        if (sales.length > 0) {
+            for (int j = 0; j < sales.length; j++) {
+                sum += sales[j];
+            }
+        }
+        return sum;
     }
 
     public int averageSales(int[] sales) {
         int average = 0;
-        if (sales.length > 0)
-        {
+        if (sales.length > 0) {
             int sum = 0;
             for (int j = 0; j < sales.length; j++) {
                 sum += sales[j];
