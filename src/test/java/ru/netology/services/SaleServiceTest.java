@@ -9,10 +9,10 @@ public class SaleServiceTest {
     public void shouldFindminMonthSales() {
         SaleService service = new SaleService();
 
-        int[] minMonth = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
+        long[] minMonth = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
 
         int expected = 9;
-        int actual = service.minMonthSales(minMonth);
+        long actual = service.minMonthSales(minMonth);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -21,10 +21,10 @@ public class SaleServiceTest {
     public void shouldFindmaxMonthSales() {
         SaleService service = new SaleService();
 
-        int[] maxMonth = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
+        long[] maxMonth = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
 
         int expected = 2;
-        int actual = service.maxMonthSales(maxMonth);
+        long actual = service.maxMonthSales(maxMonth);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -33,10 +33,10 @@ public class SaleServiceTest {
     public void shouldFindaverageSales() {
         SaleService service = new SaleService();
 
-        int[] averge = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
+        long[] averge = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
 
         int expected = 16;
-        int actual = service.averageSales(averge);
+        long actual = service.averageSales(averge);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -45,10 +45,10 @@ public class SaleServiceTest {
     public void shouldFindaverageminMonthSales() {
         SaleService service = new SaleService();
 
-        int[] minMonthAverge = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
+        long[] minMonthAverge = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
 
         int expected = 5;
-        int actual = service.minAverageMonthSales(minMonthAverge);
+        long actual = service.minAverageMonthSales(minMonthAverge);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -57,10 +57,10 @@ public class SaleServiceTest {
     public void shouldFindaveragemaxMonthSales() {
         SaleService service = new SaleService();
 
-        int[] maxMonthAverge = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
+        long[] maxMonthAverge = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
 
         int expected = 7;
-        int actual = service.maxAverageMonthSales(maxMonthAverge);
+        long actual = service.maxAverageMonthSales(maxMonthAverge);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -69,10 +69,10 @@ public class SaleServiceTest {
     public void shouldFindSumOfAllSales() {
         SaleService service = new SaleService();
 
-        int[] sum = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
+        long[] sum = {22, 30, 13, 15, 17, 20, 19, 21, 2, 12, 14, 18};
 
         int expected = 203;
-        int actual = service.SumSales(sum);
+        long actual = service.sumSales(sum);
 
         Assertions.assertEquals(expected, actual);
     }

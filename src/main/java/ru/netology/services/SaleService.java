@@ -1,9 +1,8 @@
 package ru.netology.services;
 
 public class SaleService {
-    public int minMonthSales(int[] sales) {
+    public long minMonthSales(long[] sales) {
         int minMonth = 0;
-
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
@@ -12,9 +11,8 @@ public class SaleService {
         return minMonth + 1;
     }
 
-    public int maxMonthSales(int[] sales) {
+    public long maxMonthSales(long[] sales) {
         int maxMonth = 0;
-
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[maxMonth]) {
                 maxMonth = i;
@@ -23,16 +21,8 @@ public class SaleService {
         return maxMonth + 1;
     }
 
-    public int minAverageMonthSales(int[] sales) {
-        int average = 0;
-        if (sales.length > 0) {
-            int sum = 0;
-            for (int j = 0; j < sales.length; j++) {
-                sum += sales[j];
-            }
-            average = sum / sales.length;
-        }
-
+    public long minAverageMonthSales(long[] sales) {
+        long average = averageSales(sales);
         int month = 0;
         for (int i = 0; i < sales.length; i++) {
             if (average > sales[i]) {
@@ -42,16 +32,8 @@ public class SaleService {
         return month;
     }
 
-    public int maxAverageMonthSales(int[] sales) {
-        int average = 0;
-        if (sales.length > 0) {
-            int sum = 0;
-            for (int j = 0; j < sales.length; j++) {
-                sum += sales[j];
-            }
-            average = sum / sales.length;
-        }
-
+    public long maxAverageMonthSales(long[] sales) {
+        long average = averageSales(sales);
         int month = 0;
         for (int i = 0; i < sales.length; i++) {
             if (average < sales[i]) {
@@ -61,8 +43,8 @@ public class SaleService {
         return month;
     }
 
-    public int SumSales(int[] sales) {
-        int sum = 0;
+    public long sumSales(long[] sales) {
+        long sum = 0;
         if (sales.length > 0) {
             for (int j = 0; j < sales.length; j++) {
                 sum += sales[j];
@@ -71,15 +53,9 @@ public class SaleService {
         return sum;
     }
 
-    public int averageSales(int[] sales) {
-        int average = 0;
-        if (sales.length > 0) {
-            int sum = 0;
-            for (int j = 0; j < sales.length; j++) {
-                sum += sales[j];
-            }
-            average = sum / sales.length;
-        }
+    public long averageSales(long[] sales) {
+        long sum = sumSales(sales);
+        long average = sum / 12;
         return average;
     }
 }
